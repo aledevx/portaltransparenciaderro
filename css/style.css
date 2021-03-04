@@ -71,13 +71,11 @@ ul {
           justify-content: center;
   width: 1200px;
   height: 95%;
-  border: 2px solid red;
 }
 
-.icones-linha1 {
+.icones-linha {
   width: 1100px;
   height: 200px;
-  border: 2px solid green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,69 +86,23 @@ ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 40px;
-}
-
-.icones-linha2 {
-  width: 1100px;
-  height: 200px;
-  border: 2px solid green;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 40px;
-}
-
-.icones-linha3 {
-  width: 1100px;
-  height: 200px;
-  border: 2px solid green;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .bloco {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: purple;
-  width: 180px;
-  height: 180px;
+  display: block;
+  width: 100%;
+  height: 100%;
   border-radius: 8px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.bloco:hover {
-  background-color: red;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  overflow: hidden;
+  position: relative;
 }
 
 .bloco-icone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 95%;
+  width: 100%;
   height: 70%;
-  border: 2px solid yellow;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -170,9 +122,8 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 95%;
+  width: 100%;
   height: 25%;
-  border: 2px solid blue;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -349,6 +300,77 @@ li a:hover {
   color: #f1f1f1;
 }
 
+.flip-card {
+  width: 180px;
+  height: 180px;
+  -webkit-perspective: 8000px;
+          perspective: 8000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: transparent;
+  color: black;
+}
+
+.flip-card-back {
+  padding: 10px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #005217;
+  color: white;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flip-card-back p {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  padding-top: 10px;
+}
+
+.logo-ro {
+  max-width: 88px;
+  min-width: 72px;
+}
+
+.logo-transp {
+  margin-right: 350px;
+}
+
 .nav-bar1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -364,15 +386,25 @@ li a:hover {
           justify-content: space-between;
 }
 
-.texto1-navbar1 {
-  border: 2px solid green;
-  width: 430px;
+.navbar1-divlogo1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 450px;
+  height: 100%;
   margin-left: 350px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.texto1-navbar1 {
+  text-transform: uppercase;
+  text-align: center;
   font-size: x-large;
 }
 
 .texto2-navbar1 {
-  border: 2px solid yellow;
   width: 280px;
   margin-right: 350px;
   font-size: x-large;
@@ -439,5 +471,20 @@ li a:hover {
   color: #FF8901;
   -webkit-transition: .6s ease;
   transition: .6s ease;
+}
+
+.navbar2-ul ul {
+  position: absolute;
+  min-width: 200px;
+  display: none;
+  background-color: #007A22;
+}
+
+.navbar2-ul ul li {
+  display: block;
+}
+
+ul li:hover ul {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

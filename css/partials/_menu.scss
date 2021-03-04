@@ -1,3 +1,12 @@
+.logo-ro {
+    max-width: 88px;
+    min-width: 72px;
+}
+.logo-transp {
+    margin-right: 350px;
+
+} 
+
 .nav-bar1 {
     display: flex;
     width: 100%;
@@ -6,15 +15,20 @@
     align-items: center;
     justify-content: space-between;
 }
+.navbar1-divlogo1 {
+    display: flex;
+    width: 450px;
+    height: 100%;
+    margin-left: 350px;
+    align-items: center;
+}
 
 .texto1-navbar1 {
-    border: 2px solid green;
-    width: 430px;
-    margin-left: 350px;
+    text-transform: uppercase;
+    text-align: center;
     font-size: x-large;
 }
 .texto2-navbar1 {
-    border: 2px solid yellow;
     width: 280px;
     margin-right: 350px;
     font-size:x-large;
@@ -27,6 +41,7 @@
     display: flex;
     justify-content: center;
 }
+
 
 .navbar2-ul {
     display: flex;
@@ -60,6 +75,20 @@
         color: #FF8901;
         transition: .6s ease;
     }
+}
+
+.navbar2-ul ul {
+    position: absolute;
+    min-width: 200px;
+    display: none;
+    background-color: #007A22;
+}
+.navbar2-ul ul li{
+    display: block;
+}
+
+ul li:hover ul{
+    display: block;
 }
 
 
