@@ -436,14 +436,12 @@ li a:hover {
   padding: 0px 10px;
   text-transform: uppercase;
   font-size: 13px;
-  border: 2px solid yellow;
 }
 
 .navbar2-ul li {
   list-style-type: none;
-  border: 2px solid red;
-  padding: 5px 50px;
-  height: 100%;
+  height: 40px;
+  width: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -458,13 +456,14 @@ li a:hover {
   display: -ms-flexbox;
   display: flex;
   color: #f1f1f1;
-  border: 2px solid blue;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .navbar2-ul li a:hover {
@@ -477,7 +476,7 @@ li a:hover {
   position: absolute;
   min-width: 200px;
   display: none;
-  background-color: #007A22;
+  background-color: #007a23da;
 }
 
 .navbar2-ul ul li {
@@ -485,6 +484,14 @@ li a:hover {
 }
 
 ul li:hover ul {
+  margin-top: 34px;
   display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+.drop-menu {
+  text-transform: none;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
