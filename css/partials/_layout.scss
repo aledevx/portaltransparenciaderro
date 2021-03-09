@@ -12,6 +12,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+
+    @include responsive(){
+        height: auto;
+        padding: 15px;
+    }
 }
 
 .container h3 {
@@ -25,6 +31,12 @@
     justify-content: center;
     width: 1200px;
     height: 95%;
+
+
+    @include responsive(){
+        flex-wrap: wrap;
+        height: auto;
+    }
 }
 
 .icones-linha{
@@ -34,6 +46,17 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 40px;
+    flex-wrap: wrap;
+ 
+
+    @include responsive(){
+        justify-content:space-around;
+        height: auto;
+        width: 100vh;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
 }
 
 .bloco {
@@ -43,6 +66,12 @@
     border-radius: 8px;
     overflow: hidden;
     position: relative;
+
+
+    @include responsive(){
+        display: flex;
+
+    }
    
 }
 .bloco-icone {
@@ -75,58 +104,70 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    border: 2px solid red;
+
+    @include responsive(){
+        height: auto;
+    }
+
 }
 
 .menus-rodape {
     width: 1200px;
-    height: 300px;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     padding: 20px;
-    border: 2px solid green;
+
+    @include responsive(){
+        height: auto;
+        width: 100vh;
+    }
 }
+
 .menu1 {
     width: 190px;
     height: 180px;
 
-    border: 2px solid yellow;
     
 }
+
+
 .h3-menu1 {
     justify-content: center;
     display: flex;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
-.ul-menu1 {
-    text-decoration: none;
+.ul-menu1 li{
+    margin-bottom: 4px;
 }
 
 .menu2 {
     width: 190px;
-    height: 255px;
-    
-    border: 2px solid rgb(0, 255, 221);
+    height: auto;
 }
 .h3-menu2 {
     justify-content: center;
     display: flex;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
-.ul-menu2 {
-    text-decoration: none;
+.ul-menu2 li {
+    margin-bottom: 4px;
 }
 .menu3 {
     width: 190px;
-    height: 250px;
+    height: auto;
 
-    
-    border: 2px solid purple;
 
 }
 .h3-menu3 {
     justify-content: center;
     display: flex;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 .ul-menu3 {
@@ -134,29 +175,31 @@
 }
 .menu4 {
     width: 190px;
-    height: 220px;
-    
-    border: 2px solid #f1f1f1;
+    height: auto;
 }
 .h3-menu4 {
     justify-content: center;
     display: flex;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
-.ul-menu4 {
-    text-decoration: none;
+.ul-menu4 li {
+    margin-bottom: 4px;
 }
 
 .menu5 {
     width: 190px;
     height: 85px;
-
-    border: 2px solid orange;
+    align-items: center;
+    justify-content: center;
 
 }
 .h3-menu5 {
     justify-content: center;
     display: flex;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 .h3-menu5 a {
     color: #FF8901;
@@ -177,8 +220,8 @@ li a:hover {
 }
 .footer{
     width: 100%;
-    height: 60px;
-    background: crimson;
+    height: 40px;
+    background: #003052;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -192,6 +235,14 @@ li a:hover {
     width: 180px;
     height: 180px;
     perspective: 8000px;
+
+    @include responsive(){
+        width: 150px;
+        height: 150px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
   }
   
   .flip-card-inner {
@@ -201,6 +252,12 @@ li a:hover {
     text-align: center;
     transition: transform 0.7s;
     transform-style: preserve-3d;
+
+    @include responsive(){
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
   }
   
   .flip-card:hover .flip-card-inner {
@@ -218,6 +275,13 @@ li a:hover {
   .flip-card-front {
     background-color: transparent;
     color: black;
+
+    @include responsive(){
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
   }
   
   .flip-card-back {
@@ -228,6 +292,14 @@ li a:hover {
     background-color: #005217;
     color: white;
     transform: rotateY(180deg);
+
+    @include responsive(){
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+
   }
 
   .flip-card-back p {
@@ -235,4 +307,8 @@ li a:hover {
       display: flex;
       height: 100%;
       padding-top: 10px;
+
+      @include responsive(){
+        font-size: 13px;
+    }
   }
